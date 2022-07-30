@@ -24,6 +24,4 @@ public:
 public:
 	void OnPlayerPickup(ADefragrPlayer* Player);
 
-	UFUNCTION(BlueprintNativeEvent)
-	void OnPickedUp();
 };

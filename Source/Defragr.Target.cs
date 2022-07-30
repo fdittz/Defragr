@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DefragrTarget : TargetRules
 {
-	public DefragrTarget(TargetInfo Target)
+	public DefragrTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
 		ExtraModuleNames.AddRange( new string[] { "Defragr" } );

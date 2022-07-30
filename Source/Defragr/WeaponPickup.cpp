@@ -22,10 +22,4 @@ void AWeaponPickup::OnPlayerPickup(ADefragrPlayer* Player)
 	}
 }
 
-void AWeaponPickup::OnPickedUp_Implementation()
-{
-	Super::OnPickedUp_Implementation();
-
-	Destroy();
-}
 

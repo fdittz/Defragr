@@ -25,7 +25,7 @@ APickup::APickup()
 	// Make the collider a trigger
 	static FName CollisionProfileName(TEXT("Trigger"));
 	BaseCollisionComponent->SetCollisionProfileName(CollisionProfileName);
-	BaseCollisionComponent->bGenerateOverlapEvents = true;
+	BaseCollisionComponent->SetGenerateOverlapEvents(true);
 
 	// Callback when an actor overlaps the pickup
 	BaseCollisionComponent->OnComponentBeginOverlap.AddDynamic(this, &APickup::OnActorOverlapPickup);
