@@ -36,8 +36,6 @@ void ACheckpoint::OnActorEnteredVolume(AActor* Actor, AActor* Actor2)
 	{
 		ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 
-		if(Player)
-			Player->StopRaceTimer();
 	}
 }
 
@@ -48,8 +46,5 @@ void ACheckpoint::OnActorExitedVolume(AActor* Actor, AActor* Actor2)
 	if(CheckpointType == ECheckpointType::Start)
 	{
 		ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
-
-		if(Player && Player->RaceTime == 0.f)
-			Player->StartRaceTimer();
 	}
 }

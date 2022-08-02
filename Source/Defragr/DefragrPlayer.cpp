@@ -217,8 +217,8 @@ int32 ADefragrPlayer::GetRaceTime()
 
 FString ADefragrPlayer::GetRaceTimeString()
 {
-	const int32 Minutes      = FMath::FloorToInt((RaceTime / 1000) / 60);
-	const int32 Seconds      = FMath::FloorToInt((RaceTime / 1000) % 60);
+	const int32 Minutes      = FMath::FloorToInt((double)((RaceTime / 1000) / 60));
+	const int32 Seconds      = FMath::FloorToInt((double)((RaceTime / 1000) % 60));
 	const int32 Milliseconds = RaceTime % 1000;
 
 	if(Minutes > 0)
